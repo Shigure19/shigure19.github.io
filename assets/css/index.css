@@ -1,0 +1,48 @@
+@font-face {
+    font-family: sao;
+    src: url(../fonts/saouiregular-webfont.woff) format('woff');
+}
+
+body {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto
+}
+.hidden{
+    display: none;
+}
+.top-div {
+    font-family: sao;
+    font-size: 26px
+}
+
+.b-text {
+    color: black;
+    background-color: black
+}
+
+.b-text:hover {
+    color: white;
+    background-color: black
+}
+
+.d-text {text-decoration:line-through;}
+
+@keyframes newpage{
+    from{
+        color: red;
+    }
+    50%{
+        color: yellow;
+    }
+    to{
+        color:red;
+    }
+}
+.new-div span{
+    color: red;
+    animation: newpage 500ms infinite;
+}
+

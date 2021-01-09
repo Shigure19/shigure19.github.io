@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        love
+    </title>
+    <style>
+        .container {
+            margin: 0 auto;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="img"></canvas>
+    </div>
+    <script>
+        function rgb(r, g, b) {
+            var a = new Array(3);
+            var res = '#';
+            a[0] = parseInt(r, 10).toString(16);
+            a[1] = parseInt(g, 10).toString(16);
+            a[2] = parseInt(b, 10).toString(16);
+            for (var i = 0; i < 3; i++) {
+                if (a[i].length == 1) {
+                    a[i] = '0' + a[i];
+                }
+                res += a[i];
+            }
+            return res;
+        }
+        var c = document.getElementById("img");
+        var ctx = c.getContext("2d");
+
+
+        $(window).resize(resizeCanvas);
+        function resizeCanvas() {
+            $("#img").attr("width", $(window).get(0).innerWidth*0.9);
+            $("#img").attr("height", $(window).get(0).innerHeight*0.9);
+            var w = ctx.canvas.width;
+            var h = ctx.canvas.height;
+            ctx.lineWidth = 5;
+            //MDJYZ
+            ctx.beginPath();
+            ctx.arc(w / 2, h / 2, h / 3, 7 * Math.PI / 6, 11 * Math.PI / 6, false);
+            ctx.strokeStyle = rgb(2, 156, 120);
+            ctx.stroke();
+            ctx.closePath();
+
+            //CAU
+            ctx.beginPath();
+            ctx.arc(w / 2, h / 2, h / 3, 11 * Math.PI / 6, Math.PI / 2, false);
+            ctx.strokeStyle = rgb(0, 135, 60);
+            ctx.stroke();
+            ctx.closePath();
+
+            //ECUST
+            ctx.beginPath();
+            var start = 1559491200;
+            var now = Date.parse(new Date()).toString(10).substring(0, 10);
+            var future = 1685721600;
+            var place = (2 * Math.PI / 3) * (now - start) / (future - start);
+            ctx.arc(w / 2, h / 2, h / 3, 7 * Math.PI / 6 - place, 7 * Math.PI / 6, false);
+            ctx.strokeStyle = rgb(0, 90, 150);
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        resizeCanvas();
+
+    </script>
+</body>
+
+</html>

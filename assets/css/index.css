@@ -1,48 +1,56 @@
 @font-face {
-    font-family: sao;
-    src: url(../fonts/saouiregular-webfont.woff) format('woff');
+  font-family: sao;
+  src: url(../fonts/saouiregular-webfont.woff) format("woff");
 }
 
 body {
-    text-align: center;
+  text-align: center;
 }
 
 .container {
-    margin: 0 auto
+  margin: 0 auto;
 }
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 .top-div {
-    font-family: sao;
-    font-size: 26px
+  font-family: sao;
+  font-size: 26px;
 }
 
 .b-text {
-    color: black;
-    background-color: black
+  color: black;
+  background-color: black;
 }
 
 .b-text:hover {
-    color: white;
-    background-color: black
+  color: white;
+  background-color: black;
 }
 
-.d-text {text-decoration:line-through;}
-
-@keyframes newpage{
-    from{
-        color: red;
-    }
-    50%{
-        color: yellow;
-    }
-    to{
-        color:red;
-    }
+.d-text {
+  text-decoration: line-through;
 }
-.new-div span{
+
+@keyframes newpage {
+  from {
     color: red;
-    animation: newpage 500ms infinite;
+  }
+  50% {
+    color: yellow;
+  }
+  to {
+    color: red;
+  }
+}
+.newpage-tag {
+  color: red;
+  animation: newpage 500ms infinite;
 }
 
+.sign-div {
+  font-family: Georgia, "游明朝", "Yu Mincho", "游明朝体", YuMincho,
+    "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho",
+    HGS明朝E, "MS Mincho", serif;
+  font-weight: bold;
+}

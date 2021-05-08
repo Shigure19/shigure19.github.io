@@ -5,6 +5,8 @@
 
 body {
   text-align: center;
+  background-color: #4d4268;
+  color: white;
 }
 
 .container {
@@ -48,9 +50,35 @@ body {
   animation: newpage 500ms infinite;
 }
 
-.sign-div {
+.sign {
   font-family: Georgia, "游明朝", "Yu Mincho", "游明朝体", YuMincho,
     "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho",
     HGS明朝E, "MS Mincho", serif;
   font-weight: bold;
 }
+.saoui-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.saoui-window {
+  border: 4px solid white;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #ad85cb, #6e427f);
+  padding: 5px;
+  width:24%;
+  margin:2%;
+  transition: all 2s;
+}
+
+
+.saoui-title {
+  font-family: sao;
+  font-size: xx-large;
+}
+.saoui-component{
+  font-family: sao;
+  font-size: x-large;
+}
+
